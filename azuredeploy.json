@@ -182,7 +182,10 @@
       "type": "Microsoft.Network/loadBalancers",
       "name": "[variables('loadBalancerName')]",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2017-06-01",
+      "Sku": {
+          "name": "Standard"
+      },
+      "apiVersion": "2021-05-01",
       "properties": {
         "frontendIPConfigurations": [
           {
